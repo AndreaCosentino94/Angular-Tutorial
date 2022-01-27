@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<h1>Welcome, this is {{ title }}</h1>
+
+<button>
+    <a routerLink="buttontest">
+        Vai a Boolean
+    </a>
+</button>
+
+<button>
+    <a routerLink="calculate">
+        Vai a Calcolo
+    </a>
+</button>
+<button>
+    <a routerLink="my-table">
+        Vai alla Table
+    </a>
+</button>
+<button>
+    <a routerLink="myusergit">
+        View Git Users
+    </a>
+</button>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <app-form (user)="getUser($event)"></app-form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <app-formtable [users]="utenti" (user)="getRemoveUser($event)"></app-formtable>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
+<!--
+<app-myusergit></app-myusergit>
+<app-buttontest></app-buttontest>
+<app-my-table></app-my-table>
+<app-calculate></app-calculate>
+-->

@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Azioni</th>
+    </tr>
+    <tr *ngFor="let user of users; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{user.nome | limitstring: [5]}}</td>
+        <td>{{user.citta | limitstring: [5]}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="removeUser(i)">Cancel</button></td>
+    </tr>
+</table>

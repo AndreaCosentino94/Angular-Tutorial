@@ -1,0 +1,14 @@
+<p>buttontest works!</p>
+<div *ngFor='let section of verifybtn'>
+    <h3 [ngClass]="section.verifybool ? 'green' : 'red'">{{section.name}} - {{section.verifybool}}</h3>
+    <button (click)='section.verifybool = !section.verifybool'>CLICK</button>
+    <button type="button" class="btn btn-primary" (click)='incFont()'>INC</button>
+    <button type="button" class="btn btn-primary" (click)='decFont()'>DEC</button>
+</div>
+<div [ngStyle]="{'background-color': myBool? 'green' :'red'}" style="height: 5rem;">
+    <div id="buttonbool" *ngIf='myBool'>
+        <h3>{{myBool}}</h3>
+    </div>
+    <button (click)='myBool = !myBool'>Mostra/Nascondi</button>
+</div>
+

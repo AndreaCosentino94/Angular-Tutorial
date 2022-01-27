@@ -1,0 +1,32 @@
+<p>my-table works!</p>
+
+<table>
+    <th>
+        #
+    </th>
+    <th>
+        Name
+    </th>
+    <th>
+        Age
+    </th>
+    <th>
+        Azioni
+    </th>
+    <tr *ngFor='let person of people; let i = index'>
+        <td>{{i}}</td>
+        <td><b>{{ person.name }}</b></td>
+        <td><b>{{ person.age }}</b></td>
+        <td><button class='my-btn btn-2'(click)="cancel()">CANCEL</button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="text" [(ngModel)]="catchPeople.name" placeholder="Name"></td>
+        <td><input type="number" [(ngModel)]="catchPeople.age" placeholder="age"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button [disabled]='catchPeople.name === "" || catchPeople.age == 0'class='my-btn btn-1'(click)='addPeople()'><span>ADD NEW</span></button></td>
+        <td><button class='my-btn btn-1'*ngIf='people.length !== 0'(click)="deleteAll()">DELETE ALL</button></td>
+    </tr>
+</table>

@@ -1,0 +1,12 @@
+#buttonbool{
+    width: 100px;
+    height: 50px;
+    background-color: gray;
+    margin: 0 auto;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}

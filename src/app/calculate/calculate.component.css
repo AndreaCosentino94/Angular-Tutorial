@@ -1,0 +1,10 @@
+.facts{
+    align-content: center;
+    box-sizing: border-box;
+    text-align: justify;
+    font-size: 18px;
+    background-color: white;
+    width: 800px;
+    padding: 1rem;
+    margin-top: 1rem;
+}

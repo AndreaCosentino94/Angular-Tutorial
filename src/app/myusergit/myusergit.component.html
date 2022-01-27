@@ -1,0 +1,11 @@
+<button type="button" class="btn btn-primary" style="margin: 1rem;" (click)="getVisibility()"> LOAD ALL USERS </button>
+<div class="mycard" *ngIf="visibility">
+    <div class="card" style="width: 18rem;" *ngFor="let userGit of users">
+        <img src="{{userGit.avatar_url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{userGit.login}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
